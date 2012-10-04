@@ -38,7 +38,7 @@
     ENSURE_STRING_OR_NIL(text)
     NSLog(text);
     NSString *st = text;
-    [label setText:text];
+    [label setText:st];
 }
 
 @end
