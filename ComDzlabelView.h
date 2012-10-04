@@ -8,7 +8,7 @@
 #import "RTLabel.h"
 
 @interface ComDzlabelView : TiUIView {
-    UIView *square;
+    RTLabel *label;
 }
 
 @end

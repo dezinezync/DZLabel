@@ -11,33 +11,34 @@
 
 -(void)dealloc
 {
-    RELEASE_TO_NIL(square);
+    RELEASE_TO_NIL(label);
     [super dealloc];
 }
 
--(UIView*)square
+//Should this be RTLabel or UIView ?
+-(RTLabel *)label
 {
-    if (square==nil)
+    if (label==nil)
     {
-        square = [[UIView alloc] initWithFrame:[self frame]];
-        [self addSubview:square];
+        label = [[RTLabel alloc] initWithFrame: [self frame]];
+        [self addSubview:label];
     }
-    return square;
+    return label;
 }
 
 -(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
 {
-    if (square!=nil)
+    if (label!=nil)
     {
-        [TiUtils setView:square positionRect:bounds];
+        [TiUtils setView:label positionRect:bounds];
     }
 }
 
--(void)setColor_:(id)color
-{
-    UIColor *c = [[TiUtils colorValue:color] _color];
-    UIView *s = [self square];
-    s.backgroundColor = c;
+-(void)setText_:(id)text {
+    ENSURE_STRING_OR_NIL(text)
+    NSLog(text);
+    NSString *st = text;
+    [label setText:text];
 }
 
 @end

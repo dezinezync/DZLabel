@@ -24,9 +24,9 @@ Ti.API.info("module exampleProp is => " + dzlabel.exampleProp);
 dzlabel.exampleProp = "This is a test value";
 
 var foo = dzlabel.createView({
-  "color":"red",
-  "width":20,
-  "height":20
+	width: Ti.UI.FILL,
+	height: 100,
+	text: "<b>bold</b>,<i>italic</i> and <u>underlined</u> text, and <font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00'>text with custom font and color</font>"
 });
 
 win.add(foo);
