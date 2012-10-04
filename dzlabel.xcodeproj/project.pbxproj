@@ -28,9 +28,9 @@
 		24DE9E1211C5FE74003F90F6 /* ComDzlabelModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComDzlabelModuleAssets.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA747D9F0F9514B9006C5449 /* ComDzlabel_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComDzlabel_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		F03DCBE5161DFD25006E8919 /* RTLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F03DCBE3161DFD25006E8919 /* RTLabel.h */; };
+		F03DCBE6161DFD25006E8919 /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F03DCBE4161DFD25006E8919 /* RTLabel.m */; };
 		F05AA00B161DA58F00C16182 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05AA00A161DA58F00C16182 /* CoreText.framework */; };
-		F05AA00E161DA67800C16182 /* RTLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F05AA00C161DA67800C16182 /* RTLabel.h */; };
-		F05AA00F161DA67800C16182 /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F05AA00D161DA67800C16182 /* RTLabel.m */; };
 		F05AA012161DA6BA00C16182 /* ComDzlabelView.h in Headers */ = {isa = PBXBuildFile; fileRef = F05AA010161DA6BA00C16182 /* ComDzlabelView.h */; };
 		F05AA013161DA6BA00C16182 /* ComDzlabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F05AA011161DA6BA00C16182 /* ComDzlabelView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F05AA016161DA6CF00C16182 /* ComDzlabelViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = F05AA014161DA6CF00C16182 /* ComDzlabelViewProxy.h */; };
@@ -56,9 +56,9 @@
 		AA747D9E0F9514B9006C5449 /* ComDzlabel_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComDzlabel_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComDzlabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComDzlabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F03DCBE3161DFD25006E8919 /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTLabel.h; path = external/RTLabelProject/Classes/RTLabel.h; sourceTree = "<group>"; };
+		F03DCBE4161DFD25006E8919 /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTLabel.m; path = external/RTLabelProject/Classes/RTLabel.m; sourceTree = "<group>"; };
 		F05AA00A161DA58F00C16182 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		F05AA00C161DA67800C16182 /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLabel.h; sourceTree = "<group>"; };
-		F05AA00D161DA67800C16182 /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
 		F05AA010161DA6BA00C16182 /* ComDzlabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComDzlabelView.h; sourceTree = "<group>"; };
 		F05AA011161DA6BA00C16182 /* ComDzlabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComDzlabelView.m; sourceTree = "<group>"; };
 		F05AA014161DA6CF00C16182 /* ComDzlabelViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComDzlabelViewProxy.h; sourceTree = "<group>"; };
@@ -89,8 +89,6 @@
 		0867D691FE84028FC02AAC07 /* dzlabel */ = {
 			isa = PBXGroup;
 			children = (
-				F05AA00C161DA67800C16182 /* RTLabel.h */,
-				F05AA00D161DA67800C16182 /* RTLabel.m */,
 				F05AA00A161DA58F00C16182 /* CoreText.framework */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -111,6 +109,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F03DCBE3161DFD25006E8919 /* RTLabel.h */,
+				F03DCBE4161DFD25006E8919 /* RTLabel.m */,
 				F05AA010161DA6BA00C16182 /* ComDzlabelView.h */,
 				F05AA011161DA6BA00C16182 /* ComDzlabelView.m */,
 				F05AA014161DA6CF00C16182 /* ComDzlabelViewProxy.h */,
@@ -142,9 +142,9 @@
 				AA747D9F0F9514B9006C5449 /* ComDzlabel_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* ComDzlabelModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComDzlabelModuleAssets.h in Headers */,
-				F05AA00E161DA67800C16182 /* RTLabel.h in Headers */,
 				F05AA012161DA6BA00C16182 /* ComDzlabelView.h in Headers */,
 				F05AA016161DA6CF00C16182 /* ComDzlabelViewProxy.h in Headers */,
+				F03DCBE5161DFD25006E8919 /* RTLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +220,9 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComDzlabelModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComDzlabelModuleAssets.m in Sources */,
-				F05AA00F161DA67800C16182 /* RTLabel.m in Sources */,
 				F05AA013161DA6BA00C16182 /* ComDzlabelView.m in Sources */,
 				F05AA017161DA6CF00C16182 /* ComDzlabelViewProxy.m in Sources */,
+				F03DCBE6161DFD25006E8919 /* RTLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
