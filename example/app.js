@@ -1,6 +1,6 @@
 // This is a test harness for your module
-// You should do something interesting in this harness 
-// to test out the module and to provide instructions 
+// You should do something interesting in this harness
+// to test out the module and to provide instructions
 // to users on how to use it by example.
 
 
@@ -12,7 +12,7 @@ var label = Ti.UI.createLabel({
 	top: 20
 });
 win.add(label);
-win.open();
+
 
 // TODO: write your module tests here
 var dzlabel = require('com.dzlabel');
@@ -25,8 +25,11 @@ dzlabel.exampleProp = "This is a test value";
 
 var foo = dzlabel.createView({
 	width: Ti.UI.FILL,
+	backgroundColor: 'blue',
 	height: 100,
 	text: "<b>bold</b>,<i>italic</i> and <u>underlined</u> text, and <font face='HelveticaNeue-CondensedBold' size=20 color='#CCFF00'>text with custom font and color</font>"
 });
 
 win.add(foo);
+
+win.open();

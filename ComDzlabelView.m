@@ -15,12 +15,11 @@
     [super dealloc];
 }
 
-//Should this be RTLabel or UIView ?
 -(RTLabel *)label
 {
-    if (label==nil)
+    if (label == nil)
     {
-        label = [[RTLabel alloc] initWithFrame: [self frame]];
+        label = [[RTLabel alloc] initWithFrame: [self bounds]];
         [self addSubview:label];
     }
     return label;
@@ -28,7 +27,7 @@
 
 -(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
 {
-    if (label!=nil)
+    if (self.label != nil)
     {
         [TiUtils setView:label positionRect:bounds];
     }
@@ -37,8 +36,8 @@
 -(void)setText_:(id)text {
     ENSURE_STRING_OR_NIL(text)
     NSLog(text);
-    NSString *st = text;
-    [label setText:st];
+
+    [self.label setText:text];
 }
 
 @end
