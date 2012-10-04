@@ -1,3 +1,5 @@
 /build/
 project.xcworkspace
 xcuserdata
+CoreText.framework/
+.DS_Store
