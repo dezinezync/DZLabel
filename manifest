@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2012 by Your Company
+
+
+# these should not be edited
+name: dzlabel
+moduleid: com.dzlabel
+guid: 3cf31ffe-0c06-47cf-b4c4-d558b62958de
+platform: iphone
+minsdk: 2.1.1.GA
