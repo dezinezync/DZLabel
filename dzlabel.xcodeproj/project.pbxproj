@@ -23,17 +23,16 @@
 
 /* Begin PBXBuildFile section */
 		24DD6CF91134B3F500162E58 /* ComDzlabelModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* ComDzlabelModule.h */; };
-		24DD6CFA1134B3F500162E58 /* ComDzlabelModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComDzlabelModule.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		24DE9E1111C5FE74003F90F6 /* ComDzlabelModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ComDzlabelModuleAssets.h */; };
-		24DE9E1211C5FE74003F90F6 /* ComDzlabelModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComDzlabelModuleAssets.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		24DE9E1211C5FE74003F90F6 /* ComDzlabelModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComDzlabelModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ComDzlabel_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComDzlabel_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		F0C103F3161D7B330034039F /* RTLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C103F1161D7B330034039F /* RTLabel.h */; };
-		F0C103F4161D7B330034039F /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C103F2161D7B330034039F /* RTLabel.m */; };
+		F0C103F4161D7B330034039F /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C103F2161D7B330034039F /* RTLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		F0C103F7161D7B9A0034039F /* ComDzlabelView.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C103F5161D7B9A0034039F /* ComDzlabelView.h */; };
-		F0C103F8161D7B9A0034039F /* ComDzlabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C103F6161D7B9A0034039F /* ComDzlabelView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F0C103F8161D7B9A0034039F /* ComDzlabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C103F6161D7B9A0034039F /* ComDzlabelView.m */; };
 		F0C103FB161D7BA60034039F /* ComDzlabelViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C103F9161D7BA60034039F /* ComDzlabelViewProxy.h */; };
-		F0C103FC161D7BA60034039F /* ComDzlabelViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C103FA161D7BA60034039F /* ComDzlabelViewProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F0C103FC161D7BA60034039F /* ComDzlabelViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C103FA161D7BA60034039F /* ComDzlabelViewProxy.m */; };
 		F0C103FE161D7BDD0034039F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C103FD161D7BDD0034039F /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,7 +217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24DD6CFA1134B3F500162E58 /* ComDzlabelModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComDzlabelModuleAssets.m in Sources */,
 				F0C103F4161D7B330034039F /* RTLabel.m in Sources */,
 				F0C103F8161D7B9A0034039F /* ComDzlabelView.m in Sources */,
@@ -241,16 +239,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = i386;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/ComDzlabel.dst;
@@ -271,6 +263,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -291,16 +284,10 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = i386;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/ComDzlabel.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
@@ -319,7 +306,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
@@ -334,14 +321,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = i386;
 				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -364,7 +345,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
 					"-DTI_POST_1_2",
@@ -384,14 +365,8 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = "$(ARCHS_STANDARD_32_BIT)";
 				"ARCHS[sdk=iphonesimulator*]" = i386;
 				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				DSTROOT = /tmp/ComDzlabel.dst;
@@ -412,7 +387,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = ComDzlabel;
