@@ -7,7 +7,7 @@
 #import "TiUIView.h"
 #import "RTLabel.h"
 
-@interface ComDzlabelView : TiUIView {
+@interface ComDzlabelView : TiUIView <RTLabelDelegate> {
     RTLabel *label;
 }
 

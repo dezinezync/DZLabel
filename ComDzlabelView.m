@@ -25,6 +25,7 @@
         [label setFont:[UIFont fontWithName:@"Helvetica" size:12]];
         [label setTextColor:[UIColor blackColor]];
         [self addSubview:label];
+        label.delegate = self;
     }
     return label;
 }
@@ -60,13 +61,14 @@
 
 //Send click event data when a URL is clicked
 // Needs proper implementation
-/*
 - (void)label:(id)label didSelectLinkWithURL:(NSURL *)url {
-    NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                           url, @"url",
-                           nil];
-    [self.proxy fireEvent:@"click" withObject:dict];
+    if ([self.proxy _hasListeners:@"urlClicked"]) {
+        NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                               url, @"url",
+                               nil];
+        [self.proxy fireEvent:@"urlClicked" withObject:dict];
+    }
 }
-*/
+
 
 @end
