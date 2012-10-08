@@ -38,6 +38,13 @@
     }
 }
 
+
+-(CGSize) optimumSize
+{
+    return [self.label optimumSize];
+}
+
+
 //Code from RTLabel Example
 - (void)layoutSubviews
 {
@@ -61,7 +68,8 @@
 
 //Send click event data when a URL is clicked
 // Needs proper implementation
-- (void)label:(id)label didSelectLinkWithURL:(NSURL *)url {
+- (void)rtLabel:(id)label didSelectLinkWithURL:(NSURL*)url
+{
     if ([self.proxy _hasListeners:@"urlClicked"]) {
         NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:
                                url, @"url",

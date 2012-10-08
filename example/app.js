@@ -13,6 +13,11 @@ var win = Ti.UI.createWindow({
 var dzlabel = require('com.dzlabel');
 Ti.API.info("module is => " + dzlabel);
 
+
+var urlClicked = function(e) {
+	Ti.API.info('url clicked: ' + e.url);
+};
+
 //Test cases
 var mockData = [];
 mockData.push("<b>bold</b> and <i>italic</i> style");
@@ -44,7 +49,7 @@ for(i=0; i<mockData.length; i++) {
 			text: mockData[i]
 		});
 
-		//foo.addEventListener('postlayout', fooPostLayout);
+		foo.addEventListener('urlClicked', urlClicked);
 
 	row.add(foo);
 

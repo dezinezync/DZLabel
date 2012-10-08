@@ -7,8 +7,10 @@
 #import "TiUIView.h"
 #import "RTLabel.h"
 
-@interface ComDzlabelView : TiUIView <RTLabelDelegate> {
+@interface ComDzlabelView : TiUIView <RTLabelDelegate, LayoutAutosizing> {
     RTLabel *label;
 }
+
+- (CGSize) optimumSize;
 
 @end
